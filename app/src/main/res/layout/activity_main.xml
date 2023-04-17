@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_calc"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    >
+
+
+    <TextView
+        android:id="@+id/textName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fontFamily="@font/montserrat_semibold"
+        android:text="@string/text_app"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:enabled="false"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit ="marquee_forever"
+        android:scrollHorizontally="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+
+        />
+
+    <TextView
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:fontFamily="@font/montserrat_semibold"
+        android:gravity="right|center"
+        android:inputType="textPersonName"
+        android:text="@string/text_search"
+        android:textColor="@color/white"
+        android:textSize="60sp"
+        tools:ignore="RtlHardcoded" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/buttonAC"
+                android:onClick="clearEdit"
+                android:fontFamily="@font/montserrat_semibold"
+                android:layout_marginStart="3pt"
+                android:layout_marginEnd="4pt"
+                android:layout_weight="1"
+                android:width="30pt"
+                android:height="30pt"
+                android:backgroundTint="@color/bg_button"
+                android:text="@string/text_button_AC"
+                android:textSize="20sp"
+                app:cornerRadius="10pt"
+                tools:ignore="UsingOnClickInXml" />
+
+            <Button
+                android:id="@+id/buttonBracket1"
+                android:onClick="editBrackets"
+                android:layout_width="wrap_content"
+                android:layout_marginEnd="4pt"
+                android:layout_weight="1"
+                android:width="30pt"
+                android:height="30pt"
+                android:backgroundTint="@color/bg_button"
+                android:text="@string/text_button_bracket1"
+                android:fontFamily="@font/montserrat_semibold"
+                android:textSize="25sp"
+                app:cornerRadius="10pt"
+                tools:ignore="UsingOnClickInXml" />
+            <Button
+                android:onClick="editBrackets"
+                android:id="@+id/buttonBracket2"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="@string/text_button_bracket2"
+                android:backgroundTint="@color/bg_button"
+                android:height="30pt"
+                android:width="30pt"
+                android:layout_weight="1"
+                android:layout_marginEnd="3pt"
+                app:cornerRadius="10pt"
+                android:textSize="25sp"
+                tools:ignore="UsingOnClickInXml" />
+            <Button
+                android:onClick="editOperations"
+                android:id="@+id/buttonDiv"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="@string/text_button_Div"
+                android:backgroundTint="@color/bg_button_right"
+                android:height="30pt"
+                android:width="30pt"
+                android:layout_weight="1"
+                android:layout_marginEnd="3pt"
+                app:cornerRadius="10pt"
+                android:textSize="25sp"
+                tools:ignore="UsingOnClickInXml" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:onClick="editNums"
+                android:id="@+id/buttonSeven"
+                android:fontFamily="@font/montserrat_semibold"
+                android:layout_marginStart="3pt"
+                android:layout_marginEnd="4pt"
+                android:layout_weight="1"
+                android:width="30pt"
+                android:height="30pt"
+                android:backgroundTint="@color/bg_button"
+                android:text="@string/text_button_seven"
+                android:textSize="20sp"
+                app:cornerRadius="10pt"
+                tools:ignore="UsingOnClickInXml" />
+            <Button
+                android:onClick="editNums"
+                android:id="@+id/buttonEight"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="@string/text_button_eight"
+                android:backgroundTint="@color/bg_button"
+                android:height="30pt"
+                android:width="30pt"
+                android:layout_weight="1"
+                android:layout_marginEnd="4pt"
+                app:cornerRadius="10pt"
+                android:textSize="20sp"
+                tools:ignore="UsingOnClickInXml" />
+            <Button
+                android:onClick="editNums"
+                android:id="@+id/buttonNine"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="@string/text_button_nine"
+                android:backgroundTint="@color/bg_button"
+                android:height="30pt"
+                android:width="30pt"
+                android:layout_weight="10"
+                android:layout_marginEnd="3pt"
+                app:cornerRadius="10pt"
+                android:textSize="20sp"
+                tools:ignore="UsingOnClickInXml" />
+            <Button
+                android:onClick="editOperations"
+                android:id="@+id/buttonMul"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="@string/text_button_mul"
+                android:backgroundTint="@color/bg_button_right"
+                android:height="30pt"
+                android:width="30pt"
+                android:layout_weight="10"
+                android:layout_marginEnd="3pt"
+                app:cornerRadius="10pt"
+                android:textSize="25sp"
+                />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:onClick="editNums"
+                android:id="@+id/buttonFour"
+                android:fontFamily="@font/montserrat_semibold"
+                android:layout_marginStart="3pt"
+                android:layout_marginEnd="4pt"
+                android:layout_weight="1"
+                android:width="30pt"
+                android:height="30pt"
+                android:backgroundTint="@color/bg_button"
+                android:text="@string/text_button_four"
+                android:textSize="20sp"
+                app:cornerRadius="10pt" />
+            <Button
+                android:onClick="editNums"
+                android:id="@+id/buttonFive"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="@string/text_button_five"
+                android:backgroundTint="@color/bg_button"
+                android:height="30pt"
+                android:width="30pt"
+                android:layout_weight="1"
+                android:layout_marginEnd="4pt"
+                app:cornerRadius="10pt"
+                android:textSize="20sp"
+                />
+            <Button
+                android:onClick="editNums"
+                android:id="@+id/buttonSix"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="@string/text_button_six"
+                android:backgroundTint="@color/bg_button"
+                android:height="30pt"
+                android:width="30pt"
+                android:layout_weight="10"
+                android:layout_marginEnd="3pt"
+                app:cornerRadius="10pt"
+                android:textSize="20sp"
+                />
+            <Button
+                android:onClick="editOperations"
+                android:id="@+id/buttonMinus"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="@string/text_button_minus"
+                android:backgroundTint="@color/bg_button_right"
+                android:height="30pt"
+                android:width="30pt"
+                android:layout_weight="10"
+                android:layout_marginEnd="3pt"
+                app:cornerRadius="10pt"
+                android:textSize="25sp"
+                />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:onClick="editNums"
+                android:id="@+id/buttonOne"
+                android:fontFamily="@font/montserrat_semibold"
+                android:layout_marginStart="3pt"
+                android:layout_marginEnd="4pt"
+                android:layout_weight="1"
+                android:width="30pt"
+                android:height="30pt"
+                android:backgroundTint="@color/bg_button"
+                android:text="@string/text_button_one"
+                android:textSize="20sp"
+                app:cornerRadius="10pt"
+                tools:ignore="UsingOnClickInXml" />
+            <Button
+                android:onClick="editNums"
+                android:id="@+id/buttonTwo"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="@string/text_button_two"
+                android:backgroundTint="@color/bg_button"
+                android:height="30pt"
+                android:width="30pt"
+                android:layout_weight="1"
+                android:layout_marginEnd="4pt"
+                app:cornerRadius="10pt"
+                android:textSize="20sp"
+                tools:ignore="UsingOnClickInXml" />
+            <Button
+                android:onClick="editNums"
+                android:id="@+id/buttonThree"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="@string/text_button_three"
+                android:backgroundTint="@color/bg_button"
+                android:height="30pt"
+                android:width="30pt"
+                android:layout_weight="10"
+                android:layout_marginEnd="3pt"
+                app:cornerRadius="10pt"
+                android:textSize="20sp"
+                tools:ignore="UsingOnClickInXml" />
+            <Button
+                android:onClick="editOperations"
+                android:id="@+id/buttonPlus"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="@string/text_button_plus"
+                android:backgroundTint="@color/bg_button_right"
+                android:height="30pt"
+                android:width="30pt"
+                android:layout_weight="10"
+                android:layout_marginEnd="3pt"
+                app:cornerRadius="10pt"
+                android:textSize="25sp"
+                tools:ignore="UsingOnClickInXml" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:onClick="editNums"
+                android:id="@+id/buttonZero"
+                android:fontFamily="@font/montserrat_semibold"
+                android:layout_marginStart="3pt"
+                android:layout_marginEnd="4pt"
+                android:layout_weight="1"
+                android:width="30pt"
+                android:height="30pt"
+                android:backgroundTint="@color/bg_button"
+                android:text="@string/text_button_zero"
+                android:textSize="20sp"
+                app:cornerRadius="10pt" />
+            <Button
+                android:onClick="eraseSim"
+                android:id="@+id/buttonErase"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="@string/text_button_erase"
+                android:backgroundTint="@color/bg_button"
+                android:height="30pt"
+                android:width="30pt"
+                android:layout_weight="1"
+                android:layout_marginEnd="4pt"
+                app:cornerRadius="10pt"
+                android:textSize="25sp"
+                tools:ignore="UsingOnClickInXml" />
+            <Button
+                android:onClick="Calc"
+                android:id="@+id/buttonEquals"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="@string/text_button_equals"
+                android:backgroundTint="@color/bg_button_right"
+                android:height="30pt"
+                android:width="30pt"
+                android:layout_weight="100"
+                android:layout_marginEnd="3pt"
+                app:cornerRadius="10pt"
+                android:textSize="25sp"
+                tools:ignore="UsingOnClickInXml" />
+        </TableRow>
+
+    </TableLayout>
+
+
+</LinearLayout>

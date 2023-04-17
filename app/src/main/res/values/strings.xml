@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Calc</string>
+    <string name="text_app">Calculator</string>
+    <string name="text_search">Edit</string>
+    <string name="text_button_AC">AC</string>
+    <string name="text_button_bracket1">(</string>
+    <string name="text_button_bracket2">)</string>
+    <string name="text_button_Div">÷</string>
+
+    <string name="text_button_seven">7</string>
+    <string name="text_button_eight">8</string>
+    <string name="text_button_nine">9</string>
+    <string name="text_button_mul">×</string>
+
+    <string name="text_button_four">4</string>
+    <string name="text_button_five">5</string>
+    <string name="text_button_six">6</string>
+    <string name="text_button_minus">-</string>
+
+    <string name="text_button_one">1</string>
+    <string name="text_button_two">2</string>
+    <string name="text_button_three">3</string>
+    <string name="text_button_plus">+</string>
+
+    <string name="text_button_zero">0</string>
+    <string name="text_button_erase">--</string>
+    <string name="text_button_equals">=</string>
+</resources>
